@@ -1,1 +1,3 @@
-main.js
+(function() {
+	console.log("Works fine!"); 
+})();

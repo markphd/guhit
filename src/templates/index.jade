@@ -1,1 +1,22 @@
-index.jade
+head
+	link(href="dist/css/main.css" rel="stylesheet")
+body
+	header
+		nav
+			ul
+				li
+					a(href="/") Home
+				li
+					a(href="/portfolio") Portfolio
+				li
+					a(href="/about") About
+				li
+					a(href="/contact") Contact
+		h1.tagline Lorem Ipsum
+	main
+		.slider
+			img(src="dist/images/slider-01.jpg")
+
+	script(src="dist/scripts/isotope.min.js")
+	script(src="dist/scripts/main.js")
+	footer

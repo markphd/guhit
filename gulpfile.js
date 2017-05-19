@@ -21,9 +21,9 @@ gulp.task('templates', function(){
 })
 
 gulp.task('images', function(){
-	gulp.src(['src/img/**/*'])
+	gulp.src(['src/images/**/*'])
 		.pipe(imagemin())
-		.pipe(gulp.dest('dist/img'))
+		.pipe(gulp.dest('dist/images'))
 		.pipe(browserSync.stream());
 })
 
@@ -47,7 +47,7 @@ gulp.task('styles', function(){
 		.pipe(browserSync.stream());
 	})
 
-gulp.task('default', ['templates', 'styles', 'scripts'], function(){
+gulp.task('default', ['templates', 'styles', 'images', 'scripts'], function(){
 	browserSync.init({
 		server: './'
 	});
