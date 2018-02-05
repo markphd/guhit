@@ -4,169 +4,328 @@ Primary style
 
 -------------------------------- */
 
-*, *::after, *::before {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font-size: 100%;
-  font-size: 1.6rem;
-  font-family: sans-serif;
-  color: #444444;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
+    font-size: 100%;
+    font-size: 1.6rem;
+    font-family: 'Karla', sans-serif;
+    color: #444444;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
-ul, ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+.font-kicker {
+	font-family: 'Julius Sans One', Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #999;
+}
 /* -------------------------------- 
 
 Slides
 
 -------------------------------- */
-.full-width-slider {
+
+
+// PRIMARY FONT
+@font-face {
+  font-family: 'Julius Sans One';
+  src: url('../fonts/JuliusSansOne-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/JuliusSansOne-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/JuliusSansOne-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/JuliusSansOne-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/JuliusSansOne-Regular.svg#7f14d6694f0df98bd79a1ed1a128399d') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+// BODY FONT
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Karla-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Karla-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Karla-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Karla-Bold.svg#c942a47632aeb474c2837bb3ad21cacb') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Karla-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Karla-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Karla-Regular.svg#7c838d69dff94f08b3a6a7f6bc655431') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('../fonts/Poppins-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Poppins-Medium.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Poppins-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Poppins-Medium.svg#5e1fb5531a1ff02eee3647f2c2aa5053') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Poppins-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Poppins-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Poppins-Regular.svg#2466034d15617d3db897f621d4352752') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url('../fonts/Poppins-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Poppins-SemiBold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Poppins-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Poppins-SemiBold.svg#a3c63071076ae65a265993c984b3ccf1') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
+
+
+.logo {
+  position: absolute;
+  z-index: 9;
+  color: #333;
+  font-size: 2.5em;
+  line-height: 10px;
+  left: 3%;
+  top: 3%;
+}
+
+nav {
+  padding: 3% 5%;
+  margin: 0;
+  position: absolute;
+  z-index: 9;
+  right: 0;
+}
+
+.nav-desktop__list {
+  max-width: 400px;
+}
+
+.nav-desktop__list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.slide-content {
   position: relative;
-  height: 600px;
-  overflow: hidden;
+  top: 40%;
+  left: 55%;
+  line-height: 30px;
+}
+
+.slide-content br {
+	margin: 0;
+	padding: 0;
+}
+
+p.headline, p.subhead {
+  width: 400px;
+  margin: 1% 0;
+  padding: 0;
+}
+
+.headline {
+  font-size: 1.5em;
+}
+
+.subhead {
+  font-size: 0.8em;
+  color: #777;
+}
+
+
+/*LORY SLIDER CSS*/
+/**
+ * (optional) define here the style definitions which should be applied on the slider container
+ * e.g. width including further controls like arrows etc.
+ */
+.slider {
+  position: relative;
+     margin: 0 auto;
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: -moz-none;
+     -o-user-select: none;
+     user-select: none;
+     z-index: 1;
+     height: 100vh;
+}
+
+.frame {
+    /**
+     * (optional) wrapper width, specifies width of the slider frame.
+     */
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .slides {
-  position: relative;
-  height: 100%;
-  background-color: #2c3048;
-}
-
-.slides li {
-  display: table;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  transform: translateX(100%);
-  transition: transform .5s;
-  background: url(../images/slider-01.jpg) no-repeat center center;
-  background-size: cover;
-}
-
-.slides li:nth-of-type(2) {
-  background: url(../images/slider-02.jpg) no-repeat center center;
-  background-size: cover;
-}
-
-.slides li:nth-of-type(3) {
-  background: url(../images/slider-03.jpg) no-repeat center center;
-  background-size: cover;
-}
-
-.slides li:nth-of-type(4) {
-  background: url(../images/slider-04.jpg) no-repeat center center;
-  background-size: cover;
-}
-
-.slides li.selected {
-  z-index: 2;
-  transform: translateX(0);
-}
-
-.slides li.move-left {
-  transform: translateX(-100%);
-}
-
-.slides li.visible {
-  z-index: 2;
-}
-
-.slides li > div {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  color: #FFF;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slides h2 {
-  margin-top: 0;
-  font-size: 3.5rem;
-}
-
-/* -------------------------------- 
-
-Slider navigation
-
--------------------------------- */
-.slider-navigation a {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
-  height: 48px;
-  width: 48px;
-  /* text replace */
-  overflow: hidden;
-  white-space: nowrap;
-  text-indent: 100%;
-  color: transparent;
-  background: url(../images/icon-arrow.svg) no-repeat center center;
-  opacity: .6;
-  transition: opacity .3s, visibility .3s;
-}
-
-.slider-navigation a:hover {
-  opacity: 1;
-}
-
-.slider-navigation a.next {
-  left: auto;
-  right: 10px;
-  transform: translateY(-50%) rotate(180deg) ;
-}
-
-/* -------------------------------- 
-
-Slider dots navigation
-
--------------------------------- */
-.slider-dots-navigation {
-  position: absolute;
-  z-index: 3;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.slider-dots-navigation li {
   display: inline-block;
-  float: left;
-  margin-right: 15px;
 }
 
-.slider-dots-navigation a {
-  display: block;
-  height: 14px;
-  width: 14px;
-  border: 1px solid #FFF;
-  border-radius: 50%;
-  /* text replace */
-  overflow: hidden;
-  white-space: nowrap;
-  text-indent: 100%;
-  color: transparent;
-  transition: background-color .3s;
+.frame li {
+    display: inline-block;
+    height: 100vh;
+    font-size: 15px;
+    background: #2E435A;
+    color: #333;
+    width: 100vw;
 }
 
-.slider-dots-navigation a.selected {
-  background-color: #FFF;
+#slide-1{
+  background-image: url('../images/slide-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
+}
+
+#slide-2{
+  background-image: url('../images/slide-2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #efefef;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    cursor: pointer;
+}
+
+.next {
+    right: 3%;
+}
+
+.prev {
+    left: 3%;
+}
+
+.next svg, .prev svg {
+    width: 25px;
+}
+
+#slider-index {
+  position: absolute;
+  bottom: 20px;
+  right: 5%;
+}
+
+
+/*END OF LORY SLIDER*/
+
+
+// Tessarray
+
+/* This is necessary for images to render properly */
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.image:hover {
+    opacity: 0.5;
+}
+
+
+/* Necessary if containerClass is not specified */
+
+.container {
+    position: relative;
+}
+
+
+/* Use this if images are appearing before rendering correctly */
+
+.container {
+    opacity: 0;
+}
+
+
+/* Use this to specify default container height before images load */
+
+
+/*		.container {
+			height: 500px;
+		}*/
+
+
+/* Use this to create a background for images before they render
+		Use if container opacity is not transitioning in */
+
+.box {
+    background-color: grey;
+}
+
+.filter {
+	width: 500px;
+	margin: 0 auto;
+}
+
+p.selector {
+	left: 0%;
+	font-size: 1.2em;
+	display: inline-block;
+	margin: 5%;
+	cursor: pointer;
+}
+
+
+// MAIN WHO WE ARE
+.who-we-are {
+	padding: 5%;
+	width: 50%;
+	height: 50vh;
+	margin-left: 40%;
 }

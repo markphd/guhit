@@ -2,21 +2,70 @@ head
 	link(href="dist/css/main.css" rel="stylesheet")
 body
 	header
+		h1.logo.font-kicker Guhit
 		nav
-			ul
-				li
-					a(href="/") Home
-				li
-					a(href="/portfolio") Portfolio
-				li
-					a(href="/about") About
-				li
-					a(href="/contact") Contact
-		h1.tagline Lorem Ipsum
+			ul.nav-desktop__list
+				li.nav-desktop__list-item
+					a.nav-desktop__list-link(href="#") About
+				li.nav-desktop__list-item
+					a.nav-desktop__list-link(href="#") Portfolio
+				li.nav-desktop__list-item
+					a.nav-desktop__list-link(href="#") Contact
+		.slider.js_slider
+			.frame.js_frame
+				ul.slides.js_slides
+					li#slide-1.js_slide
+						.slide-content
+							p.headline Transforming business by design
+							p.subhead
+								a(href="#") Know more
+					li#slide-2.js_slide
+						.slide-content
+							p.headline Bringing transcendent environments to real world situation.
+							p.subhead
+								a(href="#") Know more
+			span.js_prev.prev
+				svg(xmlns='http://www.w3.org/2000/svg', width='50', height='50', viewbox='0 0 501.5 501.5')
+					g
+						path(fill='#333', d='M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z')
+			span.js_next.next
+				svg(xmlns='http://www.w3.org/2000/svg', width='50', height='50', viewbox='0 0 501.5 501.5')
+					g
+						path(fill='#333', d='M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z')
+			span#slider-index
 	main
-		.slider
-			img(src="dist/images/slider-01.jpg")
+		section.who-we-are
+			h1 Offering a complete and integrated package to our clients.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolores soluta rem officiis quaerat rerum labore! Dolore, cumque sunt. Excepturi voluptas aspernatur ipsa molestias blanditiis, asperiores molestiae sapiente ipsam amet.
+		section.gallery
+			.filter
+				p.selector(data-category='') all
+				p.selector(data-category='reverse') reverse-all
+				p.selector(data-category='concept') concept
+				p.selector(data-category='drawing') drawing
+			.container
+				.box.reverse.concept(data-reverse='10', data-aspect-ratio='0.675')
+					img.image(src='dist/images/concept-1.jpg')
+				.box.reverse.drawing(data-reverse='9', data-height='720', data-width='1080')
+					img.image(src='dist/images/draw-1.jpg')
+				.box.reverse.concept(data-reverse='8', data-aspect-ratio='1')
+					img.image(src='dist/images/concept-2.jpg')
+				.box.reverse.drawing(data-reverse='7', data-aspect-ratio='1.77777777778')
+					img.image(src='dist/images/draw-2.jpg')
+				.box.reverse.concept(data-reverse='6', data-aspect-ratio='1.77778')
+					img.image(src='dist/images/concept-3.jpg')
+				.box.reverse.drawing(data-reverse='5', data-aspect-ratio='1')
+					img.image(src='dist/images/draw-3.jpg')
+				.box.reverse.concept(data-reverse='4', data-aspect-ratio='1')
+					img.image(src='dist/images/concept-4.jpg')
+				.box.reverse.drawing(data-reverse='3', data-aspect-ratio='1.77778')
+					img.image(src='dist/images/draw-4.jpg')
+				.box.reverse.concept(data-reverse='2', data-aspect-ratio='0.675')
+					img.image(src='dist/images/concept-5.jpg')
+				.box.reverse.concept(data-reverse='1', data-aspect-ratio='1.77778')
+					img.image(src='dist/images/concept-6.jpg')
 
-	script(src="dist/scripts/isotope.min.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.1/lory.min.js")
+	script(src="dist/scripts/tessarray.min.js")
 	script(src="dist/scripts/main.js")
 	footer
